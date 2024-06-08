@@ -1,4 +1,4 @@
-## Forked from [GW2-Realm-Avenger-OBS-Element](https://github.com/Evorss/GW2-Realm-Avenger-OBS-Element)' to better suit me :D
+## Forked from [GW2-Realm-Avenger-OBS-Element](https://github.com/Evorss/GW2-Realm-Avenger-OBS-Element). Edited to better suit me :D
 ### All credit goes to [Evorss](https://github.com/Evorss/).
 
 # GW2 Realm Avenger OBS Element
