@@ -1,3 +1,6 @@
+## Forked from [Evorss](https://github.com/Evorss/)' to better suit me :D
+## All credit goes to [Evorss](https://github.com/Evorss/).
+
 # GW2 Realm Avenger OBS Element
  
 Display the Realm Avenger achievement progress in OBS.

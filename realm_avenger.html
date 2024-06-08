@@ -4,61 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-           @font-face {
-            font-family: 'Menomonia';
-            src: url('https://d1h9a8s8eodvjz.cloudfront.net/fonts/menomonia/08-02-12/font/menomonia.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Nunito');
         body {
-            font-family: Menomonia, sans-serif;
-            margin: 20px;
+            font-family: Nunito, sans-serif;
+            font-weight: 700;
             background-color: transparent;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
         }
         #apiDataContainer{
             height: 30pt;
-            background-image: url("gw2swoosh.png");
-            background-size:100% 100%;
             background-repeat: no-repeat;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
         }
         #apiData{
-            margin-left: 20pt;
-            color: rgb(228, 228, 228);
-            font-weight: bolder;
+            color: rgb(255, 255, 255);
             text-shadow: 2pt;
-            font-size:1.25em;
+            font-size:16px;
             filter: drop-shadow(1px 1px 2px #000000);
-        }
-        .update-animation {
-            animation: update 750ms ease-in-out;
-        }
-        @keyframes update {
-            0% { filter: drop-shadow(1px 1px 2px #000000); }
-            100% { filter: drop-shadow(1px 1px 3px #ffff); }
-            0% { filter: drop-shadow(1px 1px 2px #000000); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div id="apiDataContainer">
-            <p id="apiData"></p>
-        </div>
+    <div id="apiDataContainer">
+        <p id="apiData"></p>
     </div>
 
     <script>
         //stuff that you should edit
         var enableAnimation = true;
-        const refreshInterval = 5000; //this is in ms;
-        const text = "Realm Avenger Progress:"
-        const apiKey = "API_KEY HERE"
+        const refreshInterval = 30000; //this is in ms;
+        const apiKey = ""
 
 
         //stuff that you can edit as well if you want to
@@ -68,7 +41,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const apiDataElement = document.getElementById('apiData');
-                    document.getElementById('apiData').textContent = `Realm Avenger Progress: ${data[0].current}/${data[0].max}`;
+                    document.getElementById('apiData').textContent = `${data[0].current}`;
                     apiDataElement.classList.add('update-animation');
                     if(enableAnimation && lastValue < data[0].current){
                         setTimeout(() => {
